@@ -20,13 +20,11 @@ class App extends Component {
     this.setState({searchValue:e.target.value});
   }
   render(){
-    const {monsters, searchValue} = this.state;
-
     return(
       <div className="App">
         <h1>Monster Rolodex</h1>
         <SearchBox onInputHandle = {this.onInputHandle}/>
-        <MonsterList monsters = {monsters.filter(monster=> monster.name.toLowerCase().includes(searchValue))}/>
+        <MonsterList monsters = {this.state.monsters} searchValue = {this.state.searchValue}/>
       </div>
 
     )
