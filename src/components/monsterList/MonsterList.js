@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './MonsterList.css';
 import {MonsterCard} from "../monsterCard/MonsterCard";
 export const MonsterList = (props) => {
